@@ -46,11 +46,6 @@ collections:
     output: true
     permalink: /:collection/:name
 
-# Icons
-email_address: kingkrouch@outlook.com
-gitlab: KingKrouch
-steam: KingKrouch
-
 # BUILD SETTINGS
 sass:
   style: compressed
