@@ -5,10 +5,10 @@ feed:
 
 # Share button options
 share:
-  email: true
+  email: false
   facebook: true
-  linkedin: true
-  pinterest: true
+  linkedin: false
+  pinterest: false
   pocket:
   reddit: true
   tumblr: true
