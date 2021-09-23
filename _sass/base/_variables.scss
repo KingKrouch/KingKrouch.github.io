@@ -62,13 +62,13 @@ html[data-theme="dark"] {
   --code-background: #382B4B;
   --code-inline: #d9b600;
   --text-shadow: #2d333b; // text shadow
-  --text: #cdd9e5; // text
-  --h1: #d40059; // headers
+  --text: #ded9e1; // text
+  --h1: #a349fd; // headers
   --h2: #c7a9f2;
-  --h3: #73ff34;
-  --h4: #00af9e;
-  --h5: #6bac00;
-  --h6: #ff5c00;
+  --h3: #b6fb96;
+  --h4: #6bac00;
+  --h5: #6891d0;
+  --h6: #378ce6;
   --border: rgba(255, 255, 255, 0.5); // border
   --cusdis--color-text-default: var(--text);
   --cusdis--color-comment-username-text: var(--link);
@@ -97,15 +97,15 @@ html, html[data-theme="light"] {
 
 // Supernova Theme
 html[data-theme="dark"] {
-  --base00: #373e47; // Default Background
+  --base00: #241f37; // Default Background
   --base01: #444c56; // Lighter Background (Used for status bars, line number and folding marks)
   --base02: #545d68; // Selection Background
   --base03: #909dab; // Comments, Invisible, Line Highlighting
   --base04: #adbac7; // Dark Foreground (Used for status bars)
-  --base05: #cdd9e5; // Default Foreground, Caret, Delimiters, Operators
+  --base05: #ded9e1; // Default Foreground, Caret, Delimiters, Operators
   --base06: #e7f3f4; // Light Foreground (Not often used)
   --base07: #ffffff; // Light Background (Not often used)
-  --base08: #d40059; // Variables, XML Tags, Markup Link Text, Markup Lists, Diff Deleted
+  --base08: #a349fd; // Variables, XML Tags, Markup Link Text, Markup Lists, Diff Deleted
   --base09: #ff5c00; // Integers, Boolean, Constants, XML Attributes, Markup Link Url
   --base0a: #d9b600; // Classes, Markup Bold, Search Text Background
   --base0b: #6bac00; // Strings, Inherited Class, Markup Code, Diff Inserted
