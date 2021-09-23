@@ -10,7 +10,7 @@ favicon: assets/favicon.ico                                                     
 
 # Header and footer text
 header_text: "Blog about game modding, amongst other things."  # Change Blog header text
-header_feature_image: assets/img/pexels/bg_frontpage.jpeg
+header_feature_image: assets/img/pexels/bg_frontpage.png
 footer_text: >
   Powered by <a href="https://jekyllrb.com/">Jekyll</a> with <a href="https://github.com/sylhare/Type-on-Strap">Type on Strap</a>
 
