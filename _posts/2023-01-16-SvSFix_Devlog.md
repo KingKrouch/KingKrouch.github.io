@@ -159,8 +159,4 @@ This is just one of the changes that I've made. Not counting any of the changes 
 
 There are probably other things that I'm missing.
 
-<br>The mod can be grabbed from here:
-<br>https://github.com/KingKrouch/SvSFix/releases
-
-<br>Source Code can be found here:
-<br>https://github.com/KingKrouch/SvSFix
+[The mod can be grabbed from here](https://github.com/KingKrouch/SvSFix) and [source code can be found here](https://github.com/KingKrouch/SvSFix).
