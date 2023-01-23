@@ -12,7 +12,7 @@ image: "https://ideafintl.com/neptunia-sisters/img/mainimg.jpg"
 * [IL2CPP Shenanigans (Why it's bad, and how I managed to work around this)](#il2cpp_info)
 * [Port Report (Since somebody has to do it)](#port_report)
 * [How I fixed some stuttering problems (And why FixedUpdate is a looming threat with Unity games)](#fixed_update)
-* [Changes made with this mod](#changes_made)
+* [Changes made with this mod and Links to Download and Source Code](#changes_made)
 
 
 
@@ -123,7 +123,7 @@ And here is the results:
 
 This is just one of the changes that I've made. Not counting any of the changes that I've done to UI elements, the new framerate limiter, or anything of that sorts. Maybe I'll expand upon this blogpost and add details regarding that.
 
-## ***Changes made with this mod:*** {#changes_made}
+## ***Changes made with this mod, alongside Links to Download and Source Code:*** {#changes_made}
 
 ***UI Modifications:***
 
@@ -157,5 +157,10 @@ This is just one of the changes that I've made. Not counting any of the changes 
 - **Added a Steam API screenshot hook to Photo Mode's screenshot capturing system** ***(As the game saves photos into "Documents/My Games" rather than the LocalAppData folder which game saves reside in).***
   <br>**NOTE: I am still working on ironing out some kinks with how screenshots are capturing backwards and with UI elements visible.**
 
-There are probably other things that I'm missing, but as usual, the mod can be grabbed from here:
+There are probably other things that I'm missing.
 
+<br>The mod can be grabbed from here:
+<br>https://github.com/KingKrouch/SvSFix/releases
+
+<br>Source Code can be found here:
+<br>https://github.com/KingKrouch/SvSFix
