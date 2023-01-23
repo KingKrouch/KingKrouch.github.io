@@ -76,7 +76,7 @@ Since IdeaFactory seemingly has been taking feedback more seriously *(Alongside 
 
 Arguably the biggest issue that I managed to (mostly) fix with this mod is the FixedUpdate stuttering. I figured I'd share some information regarding that, which I feel like would be a good warning sign on how oversights can absolutely affect the end product.
 
-<video src="https://giant.gfycat.com/disfiguredcreativehammerheadbird.mp4" controls="controls" style="max-width: 720px;">
+<video src="https://github.com/KingKrouch/kingkrouch.github.io/raw/master/assets/img/posts/svs/FixedUpdate.webm" controls="controls" style="max-width: 720px;">
 </video>
 
 This does not appear smooth like what the framerate overlay on Steam claims it is, and if a game is using IL2CPP, this will usually be impossible to fix unless you cap your framerate below 50FPS.
@@ -90,7 +90,7 @@ During testing, I started by adjusting the GlobalGameManager file's Time.FixedDe
 From my time attempting a fix, I managed to narrow down the issue, not to the camera itself, but what was controlling the player and enemy positioning. The `MapUnitCollisionRigidbodyComponent` and `MapUnitCollisionCharacterControllerComponent` scripts respectively.
 I decided to temporarily disable the component to see if it was the source of the problem. Judging by the player only being able to rotate, and the camera being much smoother, it was indeed the source of the problem.
 
-<video src="https://giant.gfycat.com/loneshadowyhornet.mp4" controls="controls" style="max-width: 720px;">
+<video src="https://github.com/KingKrouch/kingkrouch.github.io/raw/master/assets/img/posts/svs/FixedUpdateToggle.webm" controls="controls" style="max-width: 720px;">
 </video>
 
 Before we get to a discussion about an appropriate fix, apparently criticizing games tying logic to the framerate is a controversial statement in some circles (Whether that's from fanboys defending the trend of bad cashgrab PC ports, or from certain development communities that still somehow are fine with bad engine defaults (_cough cough Unreal Engine still using Vert- FOV Scaling as the default and not having working DirectInput/SteamInput support, and the people on Unreal Slackers defending that_)).
@@ -117,7 +117,7 @@ My solution for this was to create classes that derived from these two classes, 
 
 And here is the results:
 
-<video src="https://giant.gfycat.com/satisfiedbelateddiplodocus.mp4" controls="controls" style="max-width: 720px;">
+<video src="https://github.com/KingKrouch/kingkrouch.github.io/raw/master/assets/img/posts/svs/MovedToUpdate.webm" controls="controls" style="max-width: 720px;">
 </video>
 
 This is just one of the changes that I've made. Not counting any of the changes that I've done to UI elements, the new framerate limiter, or anything of that sorts. Maybe I'll expand upon this blogpost and add details regarding that.
