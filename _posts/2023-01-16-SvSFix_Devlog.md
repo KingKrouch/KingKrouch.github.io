@@ -51,7 +51,7 @@ So to sum up this release, it's a step in the right direction, but there are som
 
 Since IdeaFactory seemingly has been taking feedback more seriously *(Alongside NISA and PH3Games, good job fellas!)*, ~~which is more than I can say about a majority of Japanese publishers/developers and porting houses that release cashgrab ports in 2023 with enough corner cutting to make a certain type of [frozen PB&J sandwich](https://i5.walmartimages.com/asr/1c700394-9ee6-4915-ab8d-bb0a72a20938.402a81f87a1cb1bf72eac8d83bff86df.jpeg)~~, I figured that I would be a bit specific on where improvements need to be made *(Even if progress has been being made slowly, and members of the localization staff during testing have been transparent about being open for feedback). While I am certain a majority of these issues won't be addressed in official updates (as beta testing is done really close to the end of development, and I've already reported a few of these issues), it is a useful thing to document for future reference and future games.* _**As a wise man once said:**_
 
-![wise_cracker.png](..%2Fassets%2Fimg%2Fposts%2Fsvs%2Fwise_cracker.png)
+![wise_cracker.png](/assets/img/posts/svs/wise_cracker.png)
 
 **To start:**
 
