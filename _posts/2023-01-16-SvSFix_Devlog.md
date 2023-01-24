@@ -112,18 +112,18 @@ I've also seen my fair share of framelimiters on PC that have rounding issues, d
 
 ## ***How I fixed some stuttering problems (And why FixedUpdate is a looming threat with Unity games) :*** {#fixed_update}
 
-Arguably the biggest issue that I managed to (mostly) fix with this mod is the FixedUpdate stuttering. I figured I'd share some information regarding that, which I feel like would be a good warning sign on how oversights can absolutely affect the end product.
+Arguably the biggest issue that I managed to _(mostly)_ fix with this mod is the FixedUpdate stuttering. I figured I'd share some information regarding that, which I feel like would be a good warning sign on how blatant oversights can absolutely affect the end product to such a massive degree.
 
 <video src="https://github.com/KingKrouch/kingkrouch.github.io/raw/master/assets/img/posts/svs/FixedUpdate.webm" controls="controls" style="max-width: 720px;">
 </video>
 
 This does not appear smooth like what the framerate overlay on Steam claims it is, and if a game is using IL2CPP, this will usually be impossible to fix unless you cap your framerate below 50FPS.
 
-I have also seen several games using Unity (Samurai Maiden, Super Neptunia RPG, Overcooked, Deadly Premonition 2, Monochrome Mobius, and Rune Factory 5 are examples) that use FixedUpdate for camera/player movement updating. This can present extremely apparent problems with stuttering especially when it's used without any sort of transform interpolation. Unlike Unreal's PSO caching problems, this is something that can be taken into account.
+I have also seen several games using Unity _(Samurai Maiden, Super Neptunia RPG, Overcooked, Deadly Premonition 2, Monochrome Mobius, and Rune Factory 5 are examples)_ that use FixedUpdate for camera/player movement updating. This can present extremely apparent problems with stuttering especially when it's used without any sort of transform interpolation. Unlike Unreal's PSO caching problems, this is something that can be taken into account.
 
-I've already heard several people (and some streamers) mention the stuttering problems, and it's even more apparent when on a high refresh rate monitor, so I decided to investigate this.
+I've already heard several people _(and some streamers)_ mention the stuttering problems, and it's even more apparent when on a high refresh rate monitor, so I decided to investigate this.
 
-During testing, I started by adjusting the GlobalGameManager file's Time.FixedDeltaTime property using Unity Asset Bundle Extractor (UABE). Adjusting it to something high (like a fixed delta time of 1ms (100FPS) or 4.16ms (240FPS)) seemed to have worked around the problem, but at the cost of increased CPU utilization. We also don't entirely know what else is using FixedUpdate, so this method of working around the problem is not ideal. I've used this method of working around FixedUpdate problems in games (that use IL2CPP) before without much problem, but there are some games (Samurai Maiden comes to mind), where it's being used to handle the velocity and handling of player/enemy jumping, and that can cause softlocking in some places. But I digress...
+During testing, I started by adjusting the `GlobalGameManager` file's `Time.FixedDeltaTime` property using Unity Asset Bundle Extractor (UABE). Adjusting it to something high _(like a fixed delta time of 1ms (1000FPS) or 4.16ms (240FPS))_ seemed to have worked around the problem, but at the cost of increased CPU utilization. We also don't entirely know what else is using FixedUpdate, so this method of working around the problem is not ideal. I've used this method of working around FixedUpdate problems in games _(that use IL2CPP)_ before without much problem, but there are some games, like Samurai Maiden, where it's being used to handle the velocity and handling of player/enemy jumping, and that can cause softlocking in some places. But I digress...
 
 From my time attempting a fix, I managed to narrow down the issue, not to the camera itself, but what was controlling the player and enemy positioning. The `MapUnitCollisionRigidbodyComponent` and `MapUnitCollisionCharacterControllerComponent` scripts respectively.
 I decided to temporarily disable the component to see if it was the source of the problem. Judging by the player only being able to rotate, and the camera being much smoother, it was indeed the source of the problem.
